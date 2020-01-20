@@ -1,9 +1,10 @@
 # App Center SDK for .NET Change Log
 
-## Version 2.6.5 （Under development）
+## Version 2.6.101
 
 ### App Center
 
+* **[TEST]** "TEST" [LINK](https://github.com/MatkovIvan/AppCenter-SDK-DotNet)
 * **[Fix]** Allow whitespace characters between secrets like in versions before `2.6.0`.
 
 #### UWP
