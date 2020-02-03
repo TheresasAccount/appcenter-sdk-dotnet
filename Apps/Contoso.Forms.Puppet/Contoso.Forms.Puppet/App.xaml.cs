@@ -29,17 +29,17 @@ namespace Contoso.Forms.Puppet
         // App Center B2C secrets
         static readonly IReadOnlyDictionary<string, string> B2CAuthAppSecrets = new Dictionary<string, string>
         {
-            { XamarinDevice.UWP, "a678b499-1912-4a94-9d97-25b569284d3a" }, // same for all devices
-            { XamarinDevice.Android, "bff0949b-7970-439d-9745-92cdc59b10fe" },
-            { XamarinDevice.iOS, "b889c4f2-9ac2-4e2e-ae16-dae54f2c5899" }
+            { XamarinDevice.UWP, "5bce20c8-f00b-49ca-8580-7a49d5705d4c" }, // same for all devices
+            { XamarinDevice.Android, "987b5941-4fac-4968-933e-98a7ff29237c" },
+            { XamarinDevice.iOS, "fe2bf05d-f4f9-48a6-83d9-ea8033fbb644" }
         };
 
         // App Center AAD secrets
         static readonly IReadOnlyDictionary<string, string> AADAuthAppSecrets = new Dictionary<string, string>
         {
-            { XamarinDevice.UWP, "a678b499-1912-4a94-9d97-25b569284d3a" }, // same for all devices
-            { XamarinDevice.Android, "9c77fb6e-7fff-4ae9-ac18-46c0041a6355" },
-            { XamarinDevice.iOS, "4ca276ee-9a50-4ad6-9746-50c420f9df88" }
+            { XamarinDevice.UWP, "5bce20c8-f00b-49ca-8580-7a49d5705d4c" }, // same for all devices
+            { XamarinDevice.Android, "739eacee-42de-454c-b0d7-c093e765e009" },
+            { XamarinDevice.iOS, "e9f015c6-6c2b-4410-8053-70eaa52d90e0" }
         };
         
         // OneCollector secrets
@@ -80,13 +80,13 @@ namespace Contoso.Forms.Puppet
 
                 if (!StartType.OneCollector.Equals(StartTypeUtils.GetPersistedStartType()))
                 {
-                    AppCenter.SetLogUrl("https://in-integration.dev.avalanch.es");
+                   // AppCenter.SetLogUrl("https://in-integration.dev.avalanch.es");
                 }               
 
-                Distribute.SetInstallUrl("https://install.portal-server-core-integration.dev.avalanch.es");
-                Distribute.SetApiUrl("https://api-gateway-core-integration.dev.avalanch.es/v0.1");
-                Auth.SetConfigUrl("https://config-integration.dev.avalanch.es");
-                Data.SetTokenExchangeUrl("https://token-exchange-mbaas-integration.dev.avalanch.es/v0.1");
+               // Distribute.SetInstallUrl("https://install.portal-server-core-integration.dev.avalanch.es");
+               // Distribute.SetApiUrl("https://api-gateway-core-integration.dev.avalanch.es/v0.1");
+               // Auth.SetConfigUrl("https://config-integration.dev.avalanch.es");
+               // Data.SetTokenExchangeUrl("https://token-exchange-mbaas-integration.dev.avalanch.es/v0.1");
                 if (TrackUpdateUtils.GetPersistedUpdateTrackTime() == UpdateTrackTime.BeforeNextStart)
                 {
                     Distribute.UpdateTrack = TrackUpdateUtils.GetPersistedUpdateTrack();
