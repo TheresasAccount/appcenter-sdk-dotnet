@@ -92,7 +92,11 @@ namespace Contoso.Forms.Demo
 
                 AppCenterLog.Assert(LogTag, "AppCenter.Configured=" + AppCenter.Configured);
 
-                AppCenter.Start(GetTokensString(), typeof(Analytics), typeof(Crashes), typeof(Distribute));
+                if (TrackUpdateUtils.GetPersistedUpdateTrackTime() == UpdateTrackTime.BeforeNextStart)
+                {
+                    Distribute.UpdateTrack = TrackUpdateUtils.GetPersistedUpdateTrack();
+                }
+                AppCenter.Start(GetTokensString(), typeof(Analytics), typeof(Crashes), typeof(Distribute), typeof(Auth), typeof(Data));
                 if (Current.Properties.ContainsKey(Constants.UserId) && Current.Properties[Constants.UserId] is string id)
                 {
                     AppCenter.SetUserId(id);
