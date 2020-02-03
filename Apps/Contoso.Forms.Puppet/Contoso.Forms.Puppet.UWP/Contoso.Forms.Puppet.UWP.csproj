@@ -183,9 +183,9 @@
       <Project>{15e3fc9b-7714-4468-a296-81627a5b8f01}</Project>
       <Name>Microsoft.AppCenter.UWP</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Contoso.Forms.Puppet\Contoso.Forms.Puppet.csproj">
+    <ProjectReference Include="..\Contoso.Forms.Puppet\Contoso.Forms.Demo.csproj">
       <Project>{92313c69-3bc4-4276-a1c8-100c86183f12}</Project>
-      <Name>Contoso.Forms.Puppet</Name>
+      <Name>Contoso.Forms.Demo</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

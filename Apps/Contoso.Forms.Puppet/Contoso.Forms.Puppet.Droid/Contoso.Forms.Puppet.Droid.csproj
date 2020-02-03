@@ -8,8 +8,8 @@
     <ProjectGuid>{CBA94940-CBFA-4342-AA71-856FD863DDD0}</ProjectGuid>
     <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
-    <RootNamespace>Contoso.Forms.Puppet.Droid</RootNamespace>
-    <AssemblyName>Contoso.Forms.Puppet.Droid</AssemblyName>
+    <RootNamespace>Contoso.Forms.Demo.Droid</RootNamespace>
+    <AssemblyName>Contoso.Forms.Demo.Droid</AssemblyName>
     <TargetFrameworkVersion>v9.0</TargetFrameworkVersion>
     <AndroidApplication>True</AndroidApplication>
     <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
@@ -250,9 +250,9 @@
     <AndroidResource Include="Resources\values\colors.xml" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Contoso.Forms.Puppet\Contoso.Forms.Puppet.csproj">
+    <ProjectReference Include="..\Contoso.Forms.Puppet\Contoso.Forms.Demo.csproj">
       <Project>{92313C69-3BC4-4276-A1C8-100C86183F12}</Project>
-      <Name>Contoso.Forms.Puppet</Name>
+      <Name>Contoso.Forms.Demo</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\..\SDK\AppCenterAnalytics\Microsoft.AppCenter.Analytics.Android\Microsoft.AppCenter.Analytics.Android.csproj">
       <Project>{93E4ADA5-8D7A-44BF-9549-0AD76AB86E8F}</Project>

@@ -7,8 +7,8 @@
     <ProjectGuid>{B4CF8897-4030-445F-81C4-6DBA81F26AAC}</ProjectGuid>
     <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Contoso.Forms.Puppet.iOS</RootNamespace>
-    <AssemblyName>Contoso.Forms.Puppet.iOS</AssemblyName>
+    <RootNamespace>Contoso.Forms.Demo.iOS</RootNamespace>
+    <AssemblyName>Contoso.Forms.Demo.iOS</AssemblyName>
     <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
@@ -146,9 +146,9 @@
       <Project>{FCEB9729-627A-4964-B853-1649CA1FA76D}</Project>
       <Name>Microsoft.AppCenter.Crashes.iOS.Bindings</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Contoso.Forms.Puppet\Contoso.Forms.Puppet.csproj">
+    <ProjectReference Include="..\Contoso.Forms.Puppet\Contoso.Forms.Demo.csproj">
       <Project>{92313C69-3BC4-4276-A1C8-100C86183F12}</Project>
-      <Name>Contoso.Forms.Puppet</Name>
+      <Name>Contoso.Forms.Demo</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\..\SDK\AppCenter\Microsoft.AppCenter.iOS.Bindings\Microsoft.AppCenter.iOS.Bindings.csproj">
       <Project>{5490FECC-63B2-4543-B4FE-EDD8D1BD8351}</Project>
