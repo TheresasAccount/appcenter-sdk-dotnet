@@ -57,12 +57,6 @@
     <Reference Include="Mono.Android" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Microsoft.AppCenter.Analytics" Version="2.6.4" />
-    <PackageReference Include="Microsoft.AppCenter.Crashes" Version="2.6.4" />
-    <PackageReference Include="Microsoft.AppCenter.Distribute" Version="2.6.4" />
-    <PackageReference Include="Microsoft.AppCenter.Push" Version="2.6.4" />
-    <PackageReference Include="Microsoft.AppCenter.Auth" Version="2.6.4" />
-    <PackageReference Include="Microsoft.AppCenter.Data" Version="2.6.4" />
     <PackageReference Include="Xamarin.Forms" Version="4.4.0.991265" />
     <Reference Include="Xamarin.GooglePlayServices.Basement">
       <HintPath>..\..\..\packages\Xamarin.GooglePlayServices.Basement.71.1620.0\lib\monoandroid90\Xamarin.GooglePlayServices.Basement.dll</HintPath>
@@ -258,6 +252,78 @@
     <ProjectReference Include="..\Contoso.Forms.Demo\Contoso.Forms.Demo.csproj">
       <Project>{8E7B51FC-8A9B-49F7-A40D-4D12BBF893B6}</Project>
       <Name>Contoso.Forms.Demo</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\SDK\AppCenterAnalytics\Microsoft.AppCenter.Analytics.Android\Microsoft.AppCenter.Analytics.Android.csproj">
+      <Project>{93E4ADA5-8D7A-44BF-9549-0AD76AB86E8F}</Project>
+      <Name>Microsoft.AppCenter.Analytics.Android</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\SDK\AppCenterAnalytics\Microsoft.AppCenter.Analytics.Android.Bindings\Microsoft.AppCenter.Analytics.Android.Bindings.csproj">
+      <Project>{34771DC0-9684-45BE-9C9C-5A686468722C}</Project>
+      <Name>Microsoft.AppCenter.Analytics.Android.Bindings</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\SDK\AppCenter\Microsoft.AppCenter.Android\Microsoft.AppCenter.Android.csproj">
+      <Project>{119C1730-E109-4BC9-AA89-9DCA2C50BFD5}</Project>
+      <Name>Microsoft.AppCenter.Android</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\SDK\AppCenter\Microsoft.AppCenter.Android.Bindings\Microsoft.AppCenter.Android.Bindings.csproj">
+      <Project>{C3B5BA33-DA39-400D-B5B3-85C68354FD74}</Project>
+      <Name>Microsoft.AppCenter.Android.Bindings</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\SDK\AppCenterCrashes\Microsoft.AppCenter.Crashes.Android\Microsoft.AppCenter.Crashes.Android.csproj">
+      <Project>{D6DB87CA-B8EC-4A38-805F-AFDC7FEC38EB}</Project>
+      <Name>Microsoft.AppCenter.Crashes.Android</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\SDK\AppCenterCrashes\Microsoft.AppCenter.Crashes.Android.Bindings\Microsoft.AppCenter.Crashes.Android.Bindings.csproj">
+      <Project>{42D541D7-B7C9-45A7-8D4D-8FB5A00668B3}</Project>
+      <Name>Microsoft.AppCenter.Crashes.Android.Bindings</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\SDK\AppCenterDistribute\Microsoft.AppCenter.Distribute.Android\Microsoft.AppCenter.Distribute.Android.csproj">
+      <Project>{AD38DEE9-8A74-4B04-93C3-0831B55E7254}</Project>
+      <Name>Microsoft.AppCenter.Distribute.Android</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\SDK\AppCenterDistribute\Microsoft.AppCenter.Distribute.Android.Bindings\Microsoft.AppCenter.Distribute.Android.Bindings.csproj">
+      <Project>{11D31A79-0F09-4708-8097-3D1C5D886547}</Project>
+      <Name>Microsoft.AppCenter.Distribute.Android.Bindings</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\SDK\AppCenterPush\Microsoft.AppCenter.Push.Android\Microsoft.AppCenter.Push.Android.csproj">
+      <Project>{DF7C7C03-E335-4C23-83BA-8E490AC5B61D}</Project>
+      <Name>Microsoft.AppCenter.Push.Android</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\SDK\AppCenterPush\Microsoft.AppCenter.Push.Android.Bindings\Microsoft.AppCenter.Push.Android.Bindings.csproj">
+      <Project>{80B9A47A-7A97-4E5A-9706-43ACB25A7240}</Project>
+      <Name>Microsoft.AppCenter.Push.Android.Bindings</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\SDK\AppCenterRum\Microsoft.AppCenter.Rum.Android\Microsoft.AppCenter.Rum.Android.csproj">
+      <Project>{7F7FA7ED-1386-41B5-A11E-656B7F85A8F9}</Project>
+      <Name>Microsoft.AppCenter.Rum.Android</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\SDK\AppCenterRum\Microsoft.AppCenter.Rum.Android.Bindings\Microsoft.AppCenter.Rum.Android.Bindings.csproj">
+      <Project>{7E130457-B427-4043-A5A2-9484CB5809BF}</Project>
+      <Name>Microsoft.AppCenter.Rum.Android.Bindings</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\SDK\AppCenterAuth\Microsoft.AppCenter.Auth.Android.Bindings\Microsoft.AppCenter.Auth.Android.Bindings.csproj">
+      <Project>{E2936797-F00E-4709-A696-14B3C05B336F}</Project>
+      <Name>Microsoft.AppCenter.Auth.Android.Bindings</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\SDK\AppCenterAuth\Microsoft.AppCenter.Auth.Android\Microsoft.AppCenter.Auth.Android.csproj">
+      <Project>{C566819E-C6BE-478D-B061-6F89CC7F30C2}</Project>
+      <Name>Microsoft.AppCenter.Auth.Android</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\SDK\AppCenterAuth\Microsoft.AppCenter.Auth.Android.Bindings.Msal\Microsoft.AppCenter.Auth.Android.Bindings.Msal.csproj">
+      <Project>{9898EDAE-E071-4098-A9DF-C909A8EB9082}</Project>
+      <Name>Microsoft.AppCenter.Auth.Android.Bindings.Msal</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\SDK\AppCenterAuth\Microsoft.AppCenter.Auth.Android.Bindings.Msal.Common\Microsoft.AppCenter.Auth.Android.Bindings.Msal.Common.csproj">
+      <Project>{C1F8B170-BEBA-4432-B88C-9789BCC4533D}</Project>
+      <Name>Microsoft.AppCenter.Auth.Android.Bindings.Msal.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\SDK\AppCenterData\Microsoft.AppCenter.Data.Android.Bindings\Microsoft.AppCenter.Data.Android.Bindings.csproj">
+      <Project>{715F7D40-4134-419A-9D63-DBE846F9A708}</Project>
+      <Name>Microsoft.AppCenter.Data.Android.Bindings</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\SDK\AppCenterData\Microsoft.AppCenter.Data.Android\Microsoft.AppCenter.Data.Android.csproj">
+      <Project>{8CCB60CC-7592-4959-A63D-826201524B11}</Project>
+      <Name>Microsoft.AppCenter.Data.Android</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

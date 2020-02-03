@@ -9,7 +9,12 @@
     <FileVersion>2.6.4.0</FileVersion>
   </PropertyGroup>
   <ItemGroup>
-  <ProjectReference Include="..\..\..\SDK\AppCenter\Microsoft.AppCenter\Microsoft.AppCenter.csproj">
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.2" />
+    <PackageReference Include="Xamarin.Forms" Version="4.4.0.991265" />
+  </ItemGroup>
+
+  <ItemGroup> 
+    <ProjectReference Include="..\..\..\SDK\AppCenter\Microsoft.AppCenter\Microsoft.AppCenter.csproj">
     </ProjectReference>
     <ProjectReference Include="..\..\..\SDK\AppCenterAnalytics\Microsoft.AppCenter.Analytics\Microsoft.AppCenter.Analytics.csproj">
     </ProjectReference>
@@ -19,15 +24,12 @@
     </ProjectReference>
     <ProjectReference Include="..\..\..\SDK\AppCenterPush\Microsoft.AppCenter.Push\Microsoft.AppCenter.Push.csproj">
     </ProjectReference>
+    <ProjectReference Include="..\..\..\SDK\AppCenterRum\Microsoft.AppCenter.Rum\Microsoft.AppCenter.Rum.csproj">
+    </ProjectReference>
     <ProjectReference Include="..\..\..\SDK\AppCenterAuth\Microsoft.AppCenter.Auth\Microsoft.AppCenter.Auth.csproj">
     </ProjectReference>
     <ProjectReference Include="..\..\..\SDK\AppCenterData\Microsoft.AppCenter.Data\Microsoft.AppCenter.Data.csproj">
     </ProjectReference>
-   
-    <PackageReference Include="Newtonsoft.Json" Version="12.0.2" />
-    <PackageReference Include="Xamarin.Forms" Version="4.4.0.991265" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\..\Contoso.UtilClassLibrary\Contoso.UtilClassLibrary.csproj" />
   </ItemGroup>
 </Project>
