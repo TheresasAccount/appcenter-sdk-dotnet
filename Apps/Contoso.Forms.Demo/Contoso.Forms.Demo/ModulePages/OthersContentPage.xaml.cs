@@ -36,6 +36,13 @@ namespace Contoso.Forms.Demo
             {
                 Icon = "handbag.png";
             }
+            // Setup track update dropdown choices.
+            foreach (var trackUpdateType in TrackUpdateUtils.GetUpdateTrackChoiceStrings())
+            {
+                this.UpdateTrackPicker.Items.Add(trackUpdateType);
+            }
+            UpdateTrackPicker.SelectedIndex = TrackUpdateUtils.ToPickerUpdateTrackIndex(TrackUpdateUtils.GetPersistedUpdateTrack());
+        
         }
 
         protected override async void OnAppearing()
