@@ -24,18 +24,19 @@ namespace Contoso.Forms.Demo
     {
         public const string LogTag = "AppCenterXamarinDemo";
 
+        static readonly IReadOnlyDictionary<string, string> AppSecrets = new Dictionary<string, string>
+        {
+            { XamarinDevice.UWP, "a678b499-1912-4a94-9d97-25b569284d3a" },
+            { XamarinDevice.Android, "bff0949b-7970-439d-9745-92cdc59b10fe" },
+            { XamarinDevice.iOS, "b889c4f2-9ac2-4e2e-ae16-dae54f2c5899" }
+
+        };
+
         // OneCollector secrets
         static readonly IReadOnlyDictionary<string, string> OneCollectorTokens = new Dictionary<string, string>
         {
-            { XamarinDevice.Android, "c40f5d207131484ca4b5f945f20863c5-bef11119-61fd-45a6-8a92-daf7a308a7c6-7036" },
-            { XamarinDevice.iOS, "684020093d3844b099ccc5b7d43fc253-4e03393d-1fdc-4f9e-81f4-91fe172d3894-6969" }
-        };
-
-        static readonly IReadOnlyDictionary<string, string> AppSecrets = new Dictionary<string, string>
-        {
-            { XamarinDevice.UWP, "5bce20c8-f00b-49ca-8580-7a49d5705d4c" },
-            { XamarinDevice.Android, "739eacee-42de-454c-b0d7-c093e765e009" },
-            { XamarinDevice.iOS, "e9f015c6-6c2b-4410-8053-70eaa52d90e0" }
+            { XamarinDevice.Android, "7be01f52a17a455ca07566a4e978d961-de99cbfd-41a4-463a-9c23-92cabd834b0d-6966" },
+            { XamarinDevice.iOS, "1ad92bec07bb4cbf8d98f37c345f1982-c261ed35-7a36-429f-9f5f-6162117fbb72-7166" }
         };
 
         public App()
@@ -90,6 +91,14 @@ namespace Contoso.Forms.Demo
                 Crashes.FailedToSendErrorReport += FailedToSendErrorReportHandler;
                 Push.PushNotificationReceived += PrintNotification;
 
+                if (!StartType.OneCollector.Equals(StartTypeUtils.GetPersistedStartType()))
+                {
+                    AppCenter.SetLogUrl("https://in-integration.dev.avalanch.es");
+                }               
+
+                Distribute.SetInstallUrl("https://install.portal-server-core-integration.dev.avalanch.es");
+                Distribute.SetApiUrl("https://api-gateway-core-integration.dev.avalanch.es/v0.1");
+                
                 AppCenterLog.Assert(LogTag, "AppCenter.Configured=" + AppCenter.Configured);
 
                 Distribute.UpdateTrack = TrackUpdateUtils.GetPersistedUpdateTrack();
