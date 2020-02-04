@@ -71,6 +71,13 @@ namespace Contoso.Forms.Demo
             }
         }
 
+        async void UpdatePushEnabled(object sender, ToggledEventArgs e)
+        {
+            await Push.SetEnabledAsync(e.Value);
+            var acEnabled = await AppCenter.IsEnabledAsync();
+            RefreshPushEnabled(acEnabled);
+        }
+
         async void RefreshDistributeEnabled(bool _appCenterEnabled)
         {
             DistributeEnabledSwitchCell.On = await Distribute.IsEnabledAsync();
