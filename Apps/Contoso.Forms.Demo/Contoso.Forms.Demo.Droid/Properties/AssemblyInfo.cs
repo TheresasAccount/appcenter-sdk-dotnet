@@ -24,7 +24,7 @@ using Android.App;
 
 [assembly: AssemblyVersion("0.0.0.0")]
 [assembly: AssemblyFileVersion("2.6.5.21")]
-[assembly: AssemblyInformationalVersion("2.6.5-r0021-0b47586")]
+[assembly: AssemblyInformationalVersion("2.6.5-r0021-a176623")]
 
 // The following attributes are used to specify the signing key for the assembly, 
 // if desired. See the Mono documentation for more information about signing.

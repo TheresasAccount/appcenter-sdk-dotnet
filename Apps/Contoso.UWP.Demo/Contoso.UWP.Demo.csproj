@@ -152,9 +152,9 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Microsoft.AppCenter.Analytics" Version="2.6.5-r0021-0b47586" />
-    <PackageReference Include="Microsoft.AppCenter.Crashes" Version="2.6.5-r0021-0b47586" />
-    <PackageReference Include="Microsoft.AppCenter.Push" Version="2.6.5-r0021-0b47586" />
+    <PackageReference Include="Microsoft.AppCenter.Analytics" Version="2.6.5-r0021-a176623" />
+    <PackageReference Include="Microsoft.AppCenter.Crashes" Version="2.6.5-r0021-a176623" />
+    <PackageReference Include="Microsoft.AppCenter.Push" Version="2.6.5-r0021-a176623" />
     <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform" Version="6.2.8" />
   </ItemGroup>
   <ItemGroup>

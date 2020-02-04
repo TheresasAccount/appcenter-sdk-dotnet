@@ -57,10 +57,10 @@
     <Reference Include="Mono.Android" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Microsoft.AppCenter.Analytics" Version="2.6.5-r0021-0b47586" />
-    <PackageReference Include="Microsoft.AppCenter.Crashes" Version="2.6.5-r0021-0b47586" />
-    <PackageReference Include="Microsoft.AppCenter.Distribute" Version="2.6.5-r0021-0b47586" />
-    <PackageReference Include="Microsoft.AppCenter.Push" Version="2.6.5-r0021-0b47586" />
+    <PackageReference Include="Microsoft.AppCenter.Analytics" Version="2.6.5-r0021-a176623" />
+    <PackageReference Include="Microsoft.AppCenter.Crashes" Version="2.6.5-r0021-a176623" />
+    <PackageReference Include="Microsoft.AppCenter.Distribute" Version="2.6.5-r0021-a176623" />
+    <PackageReference Include="Microsoft.AppCenter.Push" Version="2.6.5-r0021-a176623" />
     <PackageReference Include="Xamarin.Forms" Version="4.4.0.991265" />
     <Reference Include="Xamarin.GooglePlayServices.Basement">
       <HintPath>..\..\..\packages\Xamarin.GooglePlayServices.Basement.71.1620.0\lib\monoandroid90\Xamarin.GooglePlayServices.Basement.dll</HintPath>

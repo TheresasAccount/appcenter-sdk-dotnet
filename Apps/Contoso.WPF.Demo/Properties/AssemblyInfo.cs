@@ -31,4 +31,4 @@ using System.Windows;
 // [assembly: AssemblyVersion("1.0.*")]
 [assembly: AssemblyVersion("0.0.0.0")]
 [assembly: AssemblyFileVersion("2.6.5.21")]
-[assembly: AssemblyInformationalVersion("2.6.5-r0021-0b47586")]
+[assembly: AssemblyInformationalVersion("2.6.5-r0021-a176623")]

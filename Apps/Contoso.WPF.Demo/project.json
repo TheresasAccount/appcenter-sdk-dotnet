@@ -1,7 +1,7 @@
 {
   "dependencies": {
-    "Microsoft.AppCenter.Analytics": "2.6.5-r0021-0b47586",
-    "Microsoft.AppCenter.Crashes": "2.6.5-r0021-0b47586"
+    "Microsoft.AppCenter.Analytics": "2.6.5-r0021-a176623",
+    "Microsoft.AppCenter.Crashes": "2.6.5-r0021-a176623"
   },
   "frameworks": {
     "net461": {}
