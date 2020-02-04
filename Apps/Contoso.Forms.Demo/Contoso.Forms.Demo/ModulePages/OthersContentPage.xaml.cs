@@ -36,20 +36,6 @@ namespace Contoso.Forms.Demo
             {
                 Icon = "handbag.png";
             }
-
-            // Setup auth type dropdown choices
-            foreach (var authType in AuthTypeUtils.GetAuthTypeChoiceStrings())
-            {
-                this.AuthTypePicker.Items.Add(authType);
-            }
-            this.AuthTypePicker.SelectedIndex = (int)(AuthTypeUtils.GetPersistedAuthType());
-
-            // Setup track update dropdown choices.
-            foreach (var trackUpdateType in TrackUpdateUtils.GetUpdateTrackChoiceStrings())
-            {
-                this.UpdateTrackPicker.Items.Add(trackUpdateType);
-            }
-            UpdateTrackPicker.SelectedIndex = TrackUpdateUtils.ToPickerUpdateTrackIndex(TrackUpdateUtils.GetPersistedUpdateTrack());
         }
 
         protected override async void OnAppearing()
@@ -83,13 +69,6 @@ namespace Contoso.Forms.Demo
                     await TrackUpdateUtils.SetPersistedUpdateTrackAsync(newTrackUpdateValue);
                 }
             }
-        }
-
-        async void UpdatePushEnabled(object sender, ToggledEventArgs e)
-        {
-            await Push.SetEnabledAsync(e.Value);
-            var acEnabled = await AppCenter.IsEnabledAsync();
-            RefreshPushEnabled(acEnabled);
         }
 
         async void RefreshDistributeEnabled(bool _appCenterEnabled)
