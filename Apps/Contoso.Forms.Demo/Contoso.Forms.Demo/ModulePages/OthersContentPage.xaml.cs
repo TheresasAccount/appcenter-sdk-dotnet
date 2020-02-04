@@ -50,13 +50,6 @@ namespace Contoso.Forms.Demo
                 this.UpdateTrackPicker.Items.Add(trackUpdateType);
             }
             UpdateTrackPicker.SelectedIndex = TrackUpdateUtils.ToPickerUpdateTrackIndex(TrackUpdateUtils.GetPersistedUpdateTrack());
-
-            // Setup when update dropdown choices.
-            foreach (var setupTimeType in TrackUpdateUtils.GetUpdateTrackTimeChoiceStrings())
-            {
-                this.UpdateTrackTimePicker.Items.Add(setupTimeType);
-            }
-            UpdateTrackTimePicker.SelectedIndex = (int)(TrackUpdateUtils.GetPersistedUpdateTrackTime());
         }
 
         protected override async void OnAppearing()
@@ -88,30 +81,6 @@ namespace Contoso.Forms.Demo
                 {
                     var newTrackUpdateValue = TrackUpdateUtils.FromPickerUpdateTrackIndex(newSelectionCandidate);
                     await TrackUpdateUtils.SetPersistedUpdateTrackAsync(newTrackUpdateValue);
-                    if (TrackUpdateUtils.GetPersistedUpdateTrackTime() == UpdateTrackTime.Now)
-                    {
-                        Distribute.UpdateTrack = (UpdateTrack)newTrackUpdateValue;
-                    }
-                }
-            }
-        }
-
-        async void ChangeUpdateTrackTime(object sender, PropertyChangedEventArgs e)
-        {
-            if (e.PropertyName == "IsFocused" && !this.UpdateTrackTimePicker.IsFocused)
-            {
-                var newSelectionCandidate = this.UpdateTrackTimePicker.SelectedIndex;
-                var persistedTimeTrackUpdate = (int)TrackUpdateUtils.GetPersistedUpdateTrackTime();
-                if (newSelectionCandidate != persistedTimeTrackUpdate)
-                {
-                    await TrackUpdateUtils.SetPersistedUpdateTrackTimeAsync((UpdateTrackTime)newSelectionCandidate);
-                    if ((UpdateTrackTime)newSelectionCandidate == UpdateTrackTime.BeforeNextStart)
-                    {
-                        return;
-                    }
-                    var trackUpdateValue = TrackUpdateUtils.GetPersistedUpdateTrack();
-                    Distribute.UpdateTrack = trackUpdateValue;
-                    RefreshDistributeTrackUpdate();
                 }
             }
         }
@@ -136,13 +105,10 @@ namespace Contoso.Forms.Demo
             if (!isDistributeEnable)
             {
                 UpdateTrackPicker.IsEnabled = false;
-                UpdateTrackTimePicker.IsEnabled = false;
                 return;
             }
             UpdateTrackPicker.IsEnabled = true;
             UpdateTrackPicker.SelectedIndex = TrackUpdateUtils.ToPickerUpdateTrackIndex(TrackUpdateUtils.GetPersistedUpdateTrack());
-            UpdateTrackTimePicker.IsEnabled = true;
-            UpdateTrackTimePicker.SelectedIndex = (int)TrackUpdateUtils.GetPersistedUpdateTrackTime();
         }
 
         async void RefreshPushEnabled(bool _appCenterEnabled)
